@@ -9,7 +9,7 @@ async function get_image(url) {
 var commands = {
     hello: function(what) {
         this.echo('Hello, ' + what +
-                  '. Wellcome to this terminal.');
+                  '. Welcome to this terminal.');
     },
     cat: async function() {
         try {
@@ -39,6 +39,9 @@ var commands = {
     '404': function() {
         window.open('https://anilist.co/img/404/404_chan1.jpg', '_blank');
     },
+    quit: function() {
+        window.close();
+    },
     help: function() {
         var commandNames = Object.keys(commands);
         this.echo('Available commands: ' + commandNames.join(', '));
@@ -46,6 +49,6 @@ var commands = {
 };
 
 var term = $('body').terminal(commands, {
-    greetings: 'My First Web Terminal',
+    greetings: 'My First Web Terminal, Switch to desktop mode to make your life easier.',
     checkArity: false
 });
