@@ -49,6 +49,6 @@ var commands = {
 };
 
 var term = $('body').terminal(commands, {
-    greetings: 'My First Web Terminal, Switch to desktop mode to make your life easier.',
+    greetings: "Test Terminal TwT, Switch to desktop mode to make your life easier. Or you don't I fixed it ;)",
     checkArity: false
 });
